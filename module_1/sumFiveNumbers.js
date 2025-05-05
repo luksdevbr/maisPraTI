@@ -10,10 +10,10 @@ for (let i = 0; i < 5; i++) {
 
   if (numberInput === "" || isNaN(number)) {
     console.log("Only numeric values are allowed");
-    break;
+    i--;
   } else {
     sum += number;
-  }  
+  } 
 }
 
 console.log(`Sum: ${sum.toFixed(2)}`);
