@@ -15,14 +15,14 @@ Follow these steps to set up and run the project:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/luksdevbr/maisPraTI.git
-   cd maisPraTI
+   $ git clone https://github.com/luksdevbr/maisPraTI.git
+   $ cd maisPraTI
    ```
 2. **Install dependencies**:
     ```bash
-    npm install
+    $ npm install
     // or
-    npm install prompt-sync
+    $ npm install prompt-sync
     ```
 
 ## Getting Started
@@ -30,7 +30,8 @@ Follow these steps to set up and run the project:
 To run and test the exercises:
 
 ```bash
-node <exercise>.js
+$ cd module_1
+$ node <your_script>.js
 ```
 ## License
 
