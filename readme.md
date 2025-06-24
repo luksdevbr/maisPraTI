@@ -21,8 +21,6 @@ Follow these steps to set up and run the project:
 2. **Install dependencies**:
     ```bash
     $ npm install
-    // or
-    $ npm install prompt-sync
     ```
 
 ## Getting Started
