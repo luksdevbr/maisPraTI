@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <form method="post" action="/submit-feedback">
+      <input type="text" placeholder="Name" required/>
+      <input type="email" placeholder="E-mail" required/>
+      <input type="text" placeholder="Full address" required/>
+      <select required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="compliment">Compliment</option>
+        <option value="complaint">Complaint</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea placeholder="Your feedback" required></textarea>
+      <input type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+header, main {
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+main {
+  min-height: 100dvh;
+  padding: 0 2rem;
+}
+
+section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #00000017;
+}
+
+footer {
+  padding: 1rem;
+  color: #fff;
+  background-color: #000;
+}
+
+#important {
+  border-top: 2px solid #000;
+  padding-top: 0.5rem;
+}
+
+.highlight {
+  padding: 0.5rem;
+  font-style: italic;
+  background-color: #e6e6e6;  
+}

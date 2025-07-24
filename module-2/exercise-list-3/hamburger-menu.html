@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f1011;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+      }
+
+      header {
+        border-bottom: 1px solid #201f1f;
+        padding: 5px;
+        width: 100%;
+        min-height: 48px;
+        background-color: #000;
+      }
+
+      #menu-button {
+        display: none;
+        border-radius: 100%;
+        padding: 8px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      #menu-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      #menu {
+        display: none;
+        border-right: 1px solid #201f1f;  
+        width: 300px;
+        height: 100dvh;
+        color: #fff;
+        background-color: #000;
+        overflow: hidden;
+        transform: translateX(-300px);
+        transition: 0.2s ease;
+      }
+  
+      .menu-nav {
+        margin: 0 8px;
+      } 
+
+      .menu-items {
+        padding: 10px 0;
+      }
+
+      .menu-item {
+        margin-bottom: 2px;
+        padding: 8px;
+        transition: 0.2s ease;
+        cursor: pointer;
+      }
+      
+      .menu-item:hover {
+        background-color: #ffffff0f;
+      }
+
+      .slide-menu {
+        transform: translateX(0)!important;
+      }
+
+      @media(width <= 600px) {
+        #menu {
+          display: block;
+        }
+
+        #menu-button {
+          display: flex;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="menu-button">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 135.46666 135.46667"
+          version="1.1"
+          id="svg1"
+          xml:space="preserve"
+          inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+          sodipodi:docname="drawing.svg"
+          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:svg="http://www.w3.org/2000/svg">
+          <sodipodi:namedview
+            id="namedview1"
+            pagecolor="#505050"
+            bordercolor="#eeeeee"
+            borderopacity="1"
+            inkscape:showpageshadow="0"
+            inkscape:pageopacity="0"
+            inkscape:pagecheckerboard="0"
+            inkscape:deskcolor="#505050"
+            inkscape:document-units="mm"
+            inkscape:zoom="0.71891835"
+            inkscape:cx="397.12437"
+            inkscape:cy="338.70328"
+            inkscape:window-width="1920"
+            inkscape:window-height="1014"
+            inkscape:window-x="0"
+            inkscape:window-y="35"
+            inkscape:window-maximized="1"
+            inkscape:current-layer="layer1" />
+          <defs id="defs1" />
+          <g
+            inkscape:label="Layer 1"
+            inkscape:groupmode="layer"
+            id="layer1">
+            <path
+              style="fill:#b3b3b3;fill-opacity:1;stroke-width:0.757221"
+              d="m 6.4267737,113.81343 v -6.51132 H 67.733332 129.03989 v 6.51132 6.51131 H 67.733332 6.4267737 Z m 0,-46.080095 v -6.51132 H 67.733332 129.03989 v 6.51132 6.511318 H 67.733332 6.4267737 Z m 0,-45.97992 v -6.61149 H 67.733332 129.03989 v 6.61149 6.611492 H 67.733332 6.4267737 Z"
+              id="path1" />
+          </g>
+        </svg>
+      </button>
+    </header>
+    <aside id="menu">
+      <nav class="menu-nav">
+        <ul class="menu-items">
+          <li class="menu-item">Section 1</li>
+          <li class="menu-item">Section 2</li>
+          <li class="menu-item">Section 3</li>
+          <li class="menu-item">Section 4</li>
+        </ul>
+      </nav>
+    </aside>
+    <script>
+      const menu = document.getElementById("menu");
+      const menuButton = document.getElementById("menu-button");
+
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("slide-menu");
+      });
+    </script>
+  </body>
+</html>

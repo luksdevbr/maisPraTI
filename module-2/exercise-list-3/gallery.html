@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+      :root {
+        --photo-w: 300px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #141b1e;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 30px 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 15px;
+        padding: 0 30px;
+        width: 100%;
+        max-width: 1600px; 
+        perspective: 800px; 
+      }
+
+      .photograph {
+        padding: 26px 16px 46px 16px;
+        width: auto;
+        min-width: 240px;
+        height: 326px;
+        background-color: #fff;
+        transition: 0.5s ease;
+        cursor: pointer;
+      } 
+
+      .img-container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: #000;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1000px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="flex-container">
+        <div class="gallery-grid">
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://media.wired.com/photos/593261cab8eb31692072f129/3:2/w_2560%2Cc_limit/85120553.jpg" alt="Fennec fox"/>
+              <figcaption>Fennec fox</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://i2.pickpik.com/photos/14/279/749/animal-squirrel-nature-wild-preview.jpg" alt="Squirrel"/>
+              <figcaption>Squirrel</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://t3.ftcdn.net/jpg/03/96/11/60/360_F_396116072_vIWsiyjs1K62BEgn601Ta9k8xLftu4Ff.jpg" alt="Fox"/>
+              <figcaption>Fox</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://images.ctfassets.net/cnu0m8re1exe/6uDNNqZBtpFbFPAJCb6nrT/23bb8510abe600bf19b6fb956492f803/shutterstock_370060808.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill" alt="Koala"/>
+              <figcaption>Koala</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://c02.purpledshub.com/uploads/sites/41/2024/05/Quokka.jpg?webp=1&w=1200" alt="Quokka"/>
+              <figcaption>Quokka</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://burst.shopifycdn.com/photos/profile-of-a-vibrant-green-bird-with-small-brown-beak.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="Green Parrot"/>
+              <figcaption>Green Parrot</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/majestic-elephant-in-africa-free-image.jpeg?w=600&quality=80" alt="Elephant"/>
+              <figcaption>Elephant</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://iso.500px.com/wp-content/uploads/2014/03/51260092-1170-440x440.jpeg" alt="A little Dog"/>
+              <figcaption>A little dog</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://nationalzoo.si.edu/sites/default/files/styles/max_1300x1300/public/2025-06/20241030-817A8772-19RP.jpg" alt="Giant Panda"/>
+              <figcaption>Giant Panda</figcaption>
+            </figure> 
+          </div>
+          <div class="photograph">
+            <figure class="img-container">
+              <img src="https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABdz7Fb2PaJELkfHaQ29HmzhXg7o6RhvT_1ybVI_3imSfrNp7tr5ec0zNCKTm2aQfd10DkXH0sMgVW6F0pNnWsdSIvbUplDYcoirU.jpg?r=a3c" alt="Red Panda"/>
+              <figcaption>Red Panda</figcaption>
+            </figure> 
+          </div>
+        </div>  
+      </div>
+    </main> 
+    <script>
+      const photographs = document.querySelectorAll(".photograph");
+
+      for (const photograph of photographs) {
+        photograph.addEventListener("mousemove", (event) => {
+          const rect = photograph.getBoundingClientRect();
+
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = (y - centerY) / centerY * 10;
+          const rotateY = (centerX - x) / centerX * 10;
+
+          photograph.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        photograph.addEventListener("mouseleave", () => {
+          photograph.style.transform = `rotateX(${0}deg) rotateY(${0}deg)`;
+        });
+      }
+    </script>
+  </body>
+</html>
